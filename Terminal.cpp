@@ -1,4 +1,4 @@
-﻿#include "Terminal.h"
+#include "Terminal.h"
 #include "Directory.cpp"
 
 string Terminal::Promt() {
@@ -47,7 +47,7 @@ void Terminal::ls() {
 	bool hasHidden = false;
 	for (Entry* entry : items) {
 		if (entry->isHide()) {
-			cout << entry->displayName() << " ";
+			cout << entry->displayName() << " " << endl;
 			hasHidden = true;
 		}
 	}
@@ -213,11 +213,7 @@ void Terminal::run() {
 		string cmd, arg;
 		ss >> cmd;               
 		getline(ss >> ws, arg);  
-		if (arg == "") {
-			cout << "Вы не написали имя файла/дериктории" << endl;
-			continue;
-
-		}
+		
 		command(cmd, arg);
 	}
 }
@@ -231,23 +227,54 @@ void Terminal::command(string cmd, string arg) {
 		ls();
 	}
 	else if (cmd == "cd") {
+		if (arg == "") {
+			cout << "Вы не написали имя файла/дериктории" << endl;
+			return;
+
+		}
 		cd(arg); 
 	}
 	else if (cmd == "mkdir") {
+		if (arg == "") {
+			cout << "Вы не написали имя файла/дериктории" << endl;
+			return;
+
+		}
 		mkdir(arg); 
 	}
 	else if (cmd == "touch") {
+		if (arg == "") {
+			cout << "Вы не написали имя файла/дериктории" << endl;
+			return;
+
+		}
 		
 		touch(arg);
 	}
 	else if (cmd == "edit") {
+		if (arg == "") {
+			cout << "Вы не написали имя файла/дериктории" << endl;
+			return;
+
+		}
 		
 		edit(arg);
 	}
 	else if (cmd == "rm") {
+		if (arg == "") {
+			cout << "Вы не написали имя файла/дериктории" << endl;
+			return;
+
+		}
 		rm(arg); 
 	}
+
 	else if (cmd == "restore") {
+		if (arg == "") {
+			cout << "Вы не написали имя файла/дериктории" << endl;
+			return;
+
+		}
 		restore(arg); 
 	}
 	else if (cmd == "mv") {
@@ -257,6 +284,11 @@ void Terminal::command(string cmd, string arg) {
 		mv(arg, newName);
 	}
 	else if (cmd == "cat") {
+		if (arg == "") {
+			cout << "Вы не написали имя файла/дериктории" << endl;
+			return;
+
+		}
 		cat(arg);
 	}
 	else if (cmd == "help") {
