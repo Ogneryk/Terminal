@@ -7,7 +7,7 @@ string SingleLineFile::displayName()  {
 }
 
 void SingleLineFile::display() {
-	cout << "Ñîäåðæèìîå ôîéëà " << name << endl;
+	cout << "Ð¡Ð¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ðµ Ñ„Ð°Ð¹Ð»Ð° " << name << endl;
 	cout << line << endl;
 }
 
@@ -20,9 +20,9 @@ void SingleLineFile::restore() {
 }
 
 void SingleLineFile::edit() {
-	cout << "ââåäèòå ñòðîêó äëÿ ñîçäàíèÿ/çàìåíû" << endl;
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð´Ð»Ñ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ/Ð·Ð°Ð¼ÐµÐ½Ñ‹" << endl;
 	getline(cin >> ws, line);
-	cout << "èçìåíåíèÿ ñõðàíåíû" << endl;
+	cout << "Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ ÑÑ…Ñ€Ð°Ð½ÐµÐ½Ñ‹" << endl;
 }
 
 string SingleLineFile::getContent() const {
