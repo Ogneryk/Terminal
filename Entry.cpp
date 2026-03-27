@@ -15,6 +15,9 @@ void Entry::restore() {
 	}
 }
 string Entry::displayName() {
+	if (name[0] == '.') {
+		return name.substr(1);
+	}
 	return name;
 }
 
