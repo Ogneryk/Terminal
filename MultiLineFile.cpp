@@ -1,7 +1,7 @@
 #include "MultiLineFile.h"
 
 MultiLineFile::MultiLineFile(string name) : Entry(name) {
-	lines.push_back("Путсая строка");
+	//lines.push_back("Путсая строка");
 }
 
 string MultiLineFile::displayName() {
