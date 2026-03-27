@@ -19,7 +19,7 @@ string Entry::displayName() {
 }
 
 void Entry::edit() {
-	cout << "Îøèáêà " << name << " íåïîääåðæèâàåò ðåäàêòèðîâàíèå" << endl;
+	cout << "ÐžÑˆÐ¸Ð±ÐºÐ° " << name << " Ð½ÐµÐ¿Ð¾Ð´Ð´ÐµÑ€Ð¶Ð¸Ð²Ð°ÐµÑ‚ Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ" << endl;
 }
 
 Entry* Entry::find(string name) {
@@ -40,7 +40,7 @@ bool Entry::isHide() {
 }
 
 void Entry::display() {
-	cout << "îïåðàöèÿ íåïîääåðæèâàåòñÿ " << endl;
+	cout << "Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ñ Ð½ÐµÐ¿Ð¾Ð´Ð´ÐµÑ€Ð¶Ð¸Ð²Ð°ÐµÑ‚ÑÑ " << endl;
 }
 
 void Entry::setName(string newName) {
