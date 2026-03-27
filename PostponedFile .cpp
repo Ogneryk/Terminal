@@ -4,21 +4,21 @@
 PostponedFile::PostponedFile(string name, Directory* parentDir) : Entry(name), parent(parentDir){}
 
 void PostponedFile::edit() {
-	cout << "Ôàéë " << name << "åùå íå èíèöèàëèçèðîâàí" << endl;
-	cout << "Âûáåðèòå òèï s - îäíîñòðî÷íûé  m - ìíîãîñòðî÷íûé" << endl;
+	cout << "Ð¤Ð°Ð¹Ð» " << name << "ÐµÑ‰Ðµ Ð½Ðµ Ð¸Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð¸Ñ€Ð¾Ð²Ð°Ð½" << endl;
+	cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ‚Ð¸Ð¿ s - Ð¾Ð´Ð½Ð¾ÑÑ‚Ñ€Ð¾Ñ‡Ð½Ñ‹Ð¹  m - Ð¼Ð½Ð¾Ð³Ð¾ÑÑ‚Ñ€Ð¾Ñ‡Ð½Ñ‹Ð¹" << endl;
 	char chois;
 	cin >> chois;
 	Entry* newFile = nullptr;
 	if (chois == 's' || chois == 'S') {
 		newFile = new SingleLineFile(name);
-		cout << "ñîçäàí îäíîñòðî÷íûé ôàéë " << endl;
+		cout << "ÑÐ¾Ð·Ð´Ð°Ð½ Ð¾Ð´Ð½Ð¾ÑÑ‚Ñ€Ð¾Ñ‡Ð½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð» " << endl;
 	}
 	else if (chois == 'M' || chois == 'm') {
 		newFile = new MultiLineFile(name);
-		cout << "ñîçäàí ìíîãîñòðî÷íûé ôàéë" << endl;
+		cout << "ÑÐ¾Ð·Ð´Ð°Ð½ Ð¼Ð½Ð¾Ð³Ð¾ÑÑ‚Ñ€Ð¾Ñ‡Ð½Ñ‹Ð¹ Ñ„Ð°Ð¹Ð»" << endl;
 	}
 	else {
-		cout << "Îòìåíà èíèöèàëèçàöèè" << endl;
+		cout << "ÐžÑ‚Ð¼ÐµÐ½Ð° Ð¸Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ð¸" << endl;
 		return;
 	}
 
