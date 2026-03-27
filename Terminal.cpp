@@ -213,6 +213,11 @@ void Terminal::run() {
 		string cmd, arg;
 		ss >> cmd;               
 		getline(ss >> ws, arg);  
+		if (arg == "") {
+			cout << "Вы не написали имя файла/дериктории" << endl;
+			continue;
+
+		}
 		command(cmd, arg);
 	}
 }
