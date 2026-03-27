@@ -30,7 +30,7 @@ void Directory::restore()  {
 	
 }
 void Directory::edit()  {
-	cout << "Îøèáêà äèðèêòîðèþ " << name << "íåëüçÿ ðåäàêòèðîâàòü" << endl;
+	cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð´Ð¸Ñ€Ð¸ÐºÑ‚Ð¾Ñ€Ð¸ÑŽ " << name << "Ð½ÐµÐ»ÑŒÐ·Ñ Ñ€ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ" << endl;
 }
 
 Directory* Directory::asDirectory()  {
