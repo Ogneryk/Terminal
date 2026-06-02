@@ -25,7 +25,7 @@ void Terminal::help() {
 	cout << "touch - создание файла" << endl;
 	cout << "mkdir - создание директориии" << endl;
 	cout << "rm    - удаление файла/директории" << endl;
-	cout << "restor - восстановление файла" << endl;
+	cout << "restore - восстановление файла" << endl;
 	cout << "mv    -  переименование файла/директории" << endl;
 	cout << "edit  - редактирование файла" << endl;
 }
@@ -133,7 +133,7 @@ void Terminal::rm(string name) {
 
 }
 
-void Terminal::restore(const std::string& name) {
+void Terminal::restore(string& name) {
     Directory* curr = workingDirectory.back();
 
 
