@@ -49,3 +49,6 @@ void Entry::display() {
 void Entry::setName(string newName) {
 	name = newName;
 }
+string Entry::getName() const {
+	return name;
+}
