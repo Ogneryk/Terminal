@@ -1,5 +1,5 @@
 #include "Terminal.h"
-#include "Directory.cpp"
+#include "Directory.h"
 
 string Terminal::Promt() {
 	string message = "";
