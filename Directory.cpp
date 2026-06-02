@@ -37,12 +37,10 @@ Directory* Directory::asDirectory()  {
 	return this;
 }
 
-Entry* Directory::find(string name) {
-	if (this->name == name) {
-		return this;
-	}
+Entry* Directory::find(string targetName) {
 	for (Entry* entry : direct) {
-		if (entry->displayName() == name) {
+	
+		if (entry->getName() == targetName) {
 			return entry;
 		}
 	}
