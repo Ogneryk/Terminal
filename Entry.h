@@ -24,4 +24,5 @@ public:
 	virtual void display();
 	bool isHide();
 	void setName(string newName);
+	string getName() const;
 };
