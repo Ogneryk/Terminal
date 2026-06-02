@@ -21,7 +21,7 @@ void  MultiLineFile::display() {
 		cout << "пустой файл" << endl;
 	}
 	else {
-		for (rsize_t i = 0; i < lines.size(); ++i) {
+		for (size_t i = 0; i < lines.size(); ++i) {
 			cout << i << ": " << lines[i] << endl;
 		}
 	}
