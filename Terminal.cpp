@@ -133,19 +133,24 @@ void Terminal::rm(string name) {
 
 }
 
-void Terminal::restore(string name) {
-	Directory* curr = workingDirectory.back();
-	Entry* found = curr->find('.' + name);
-	if (curr->find(name) != nullptr) {
-		cout << "Файл не был скрыт" << endl;
-	}
-	if (found != nullptr) {
-		found->restore();
-		cout << "Файл успешно восстановлен" << endl;
-	}
-	else {
-		cout << "Файл не найден" << endl;
-	}
+void Terminal::restore(const std::string& name) {
+    Directory* curr = workingDirectory.back();
+
+
+    if (curr->find(name) != nullptr) {
+        std::cout << "Ошибка: Файл с таким именем уже существует или не был скрыт.\n";
+        return; 
+    }
+
+
+    Entry* found = curr->find('.' + name);
+    if (found != nullptr) {
+        found->restore();
+        std::cout << "Файл успешно восстановлен.\n";
+    }
+    else {
+        std::cout << "Ошибка: Скрытый файл '" << name << "' не найден.\n";
+    }
 }
 
 void Terminal::mv(string oldName,string newName) {
