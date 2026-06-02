@@ -133,7 +133,7 @@ void Terminal::rm(string name) {
 
 }
 
-void Terminal::restore(string& name) {
+void Terminal::restore(string name) {
     Directory* curr = workingDirectory.back();
 
 
