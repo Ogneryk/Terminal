@@ -3,8 +3,6 @@ SRCS = $(wildcard *.cpp)
 
 all: $(TARGET)
 
-$(TARGET): $(SRCS)
-	g++ -std=c++17 $(SRCS) -o $(TARGET)
+$(TARGET): $(SRCS); g++ -std=c++17 $(SRCS) -o $(TARGET)
 
-clean:
-	rm -f $(TARGET)
+clean:; rm -f $(TARGET)
