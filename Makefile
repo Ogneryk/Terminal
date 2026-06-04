@@ -1,4 +1,4 @@
-TARGET = vfs_program
+TARGET = my_program
 SRCS = $(wildcard *.cpp)
 
 all: $(TARGET)
